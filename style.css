@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
+h1 {
+    text-align: center;
+}
+
+/* card related css */
 * {
     box-sizing: border-box;
 }
@@ -42,6 +47,7 @@ body {
     left: 20px;
     margin: 0;
     opacity: 0;
+    text-shadow: 4px 4px 8px rgba(0,0,0,1);
 }
 
 .panel.active {
