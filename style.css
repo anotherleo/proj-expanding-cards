@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Muli', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center; /* horizontal */
@@ -13,4 +13,46 @@ body {
     height: 100vh; /*100vh = tela completa*/
     overflow: hidden; /* não mostra scroll bars */
     margin: 0;
+}
+
+.container {
+    display: flex; /* as children ficam em linha */
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 80vh;
+    border-radius: 5vh;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 1vh;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s; /* time to the card expansion */
+}
+
+@media(max-width: 480px){
+    /* think about */
 }
